@@ -43,8 +43,8 @@ importers:
         version: 6.1.13(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@macalinao/tsconfig':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       '@tanstack/router-vite-plugin':
         specifier: ^1.87.7
         version: 1.87.7(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
@@ -110,8 +110,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(@types/eslint@9.6.1)(jiti@1.21.6)(typescript@5.7.2)
       '@macalinao/tsconfig':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
@@ -141,8 +141,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(@types/eslint@9.6.1)(jiti@1.21.6)(typescript@5.7.2)
       '@macalinao/tsconfig':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       eslint:
         specifier: ^9.16.0
         version: 9.16.0(jiti@1.21.6)
@@ -831,8 +831,8 @@ packages:
   '@macalinao/eslint-config@1.0.0':
     resolution: {integrity: sha512-+6cXj0kTuM0V/7mTQNHmn4jG/Xk7K9zRwzMJRHz5HqP4jNQz+xGF/oK5gUjPPwg1nHsa5LSAec7EHf8HKxJIYA==}
 
-  '@macalinao/tsconfig@1.0.0':
-    resolution: {integrity: sha512-VdO+4wQmvzouwllMzGVvpw8HxqigvrhPQhmIHn22U14Nobjb1jo+jRAGpl1MVe75Y8tjcTt98yOYpEvQcC6KQA==}
+  '@macalinao/tsconfig@1.0.1':
+    resolution: {integrity: sha512-f5iZeJR+h+ru7X3NhgluoUAACDkY+DqT2ZACwdQ3DYoOXrbRxNpSmsa1vEvcAHnZyuWAaxu/+olSzzuwuYi9JA==}
 
   '@manypkg/find-root@1.1.0':
     resolution: {integrity: sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA==}
@@ -3730,7 +3730,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@macalinao/tsconfig@1.0.0': {}
+  '@macalinao/tsconfig@1.0.1': {}
 
   '@manypkg/find-root@1.1.0':
     dependencies:

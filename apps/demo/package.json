@@ -22,7 +22,7 @@
     }
   },
   "devDependencies": {
-    "@macalinao/tsconfig": "^1.0.0",
+    "@macalinao/tsconfig": "^1.0.1",
     "@tanstack/router-vite-plugin": "^1.87.7",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
