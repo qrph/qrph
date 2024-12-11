@@ -44,6 +44,10 @@ const examples = {
     sansrival:
       "00020101021128650011ph.ppmi.p2m0111BNORPHMMXXX031091843340270410918433402705033105204581453036085802PH5920SANS RIVAL FOOD DEVE6015NEGROS ORIENTAL62560011ph.ppmi.p2m0525116540002715169960576232907083614093088320012ph.ppmi.qrph011211654000271563047EB6",
   },
+  paymongo: {
+    lazada:
+      "00020101021228790011ph.ppmi.p2m0111PAEYPHM2XXX0324urLmCGCBdgRHfgT6ypDjpNsp041003030028860503010520460125303608540820035.385802PH5906Lazada6015Bonifacio Globa62430012ph.ppmi.qrph0306uuW5FD05062110000803***88440012ph.ppmi.qrph0124urLmCGCBdgRHfgT6ypDjpNsp630425A0",
+  },
 };
 
 const EXAMPLES = [
@@ -60,10 +64,12 @@ const EXAMPLES = [
   ["Shopee - Sansrival", examples.shopee.sansrival],
   ["BPI - Sansrival", examples.bpi.sansrival],
   ["BDO - Sansrival", examples.bdo.sansrival],
+  ["PayMongo - Lazada", examples.bdo.sansrival],
 ] as const;
 
 describe("decodeQRText", () => {
   it("should be invertible", () => {
+    console.log(decodeQRPHFromText(examples.gcash.gongcha));
     for (const [name, example] of EXAMPLES) {
       expect(encodeQRPHToText(decodeQRPHFromText(example)), name).toBe(example);
     }
