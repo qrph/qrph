@@ -8,6 +8,10 @@ QR Ph is a standardized format for encoding payment instructions in a QR code ba
 
 This library was created by reverse engineering various QR Ph codes found scattered across the Philippines. I hope open sourcing my work will make it easier for others to create their own tools to make payments more seamless across the Philippines.
 
+## Additional Resources
+
+- [steplix/emv-qrcps](https://github.com/steplix/emv-qrcps) -- another JavaScript library for parsing QR Ph codes. This library heavily borrows from it.
+
 ## License
 
 [Apache-2.0](LICENSE.txt)
