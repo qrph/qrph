@@ -1,0 +1,50 @@
+{
+  "name": "@qrph/demo-app",
+  "description": "Application for previewing QR Ph codes using the @qrph/qrph library.",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Ian Macalinao <me@ianm.com>",
+  "license": "Apache-2.0",
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  },
+  "devDependencies": {
+    "@macalinao/tsconfig": "^1.0.0",
+    "@tanstack/router-vite-plugin": "^1.87.7",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "babel-plugin-twin": "^1.1.0",
+    "eslint": "^9.16.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "twin.macro": "^3.4.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "dependencies": {
+    "@qrph/qrph": "^0.0.1",
+    "@tanstack/react-router": "^1.87.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.13"
+  }
+}
