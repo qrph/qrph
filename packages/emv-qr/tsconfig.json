@@ -1,0 +1,6 @@
+{
+  "extends": ["@macalinao/tsconfig/tsconfig.base.json"],
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"]
+  }
+}
