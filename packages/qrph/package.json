@@ -36,5 +36,9 @@
     "clean": "tsc --build --clean && rm -fr dist/",
     "lint": "eslint .",
     "test": "vitest"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
