@@ -8,18 +8,23 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createFileRoute } from "@tanstack/react-router"
+
 // Import Routes
 
 import { Route as rootRoute } from "./routes/__root.tsx"
-import { Route as PayCodeImport } from "./routes/pay/$code.tsx"
+
+// Create Virtual Routes
+
+const PayCodeLazyImport = createFileRoute("/pay/$code")()
 
 // Create/Update Routes
 
-const PayCodeRoute = PayCodeImport.update({
+const PayCodeLazyRoute = PayCodeLazyImport.update({
   id: "/pay/$code",
   path: "/pay/$code",
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() => import("./routes/pay/$code.lazy.tsx").then((d) => d.Route))
 
 // Populate the FileRoutesByPath interface
 
@@ -29,7 +34,7 @@ declare module "@tanstack/react-router" {
       id: "/pay/$code"
       path: "/pay/$code"
       fullPath: "/pay/$code"
-      preLoaderRoute: typeof PayCodeImport
+      preLoaderRoute: typeof PayCodeLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -38,16 +43,16 @@ declare module "@tanstack/react-router" {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  "/pay/$code": typeof PayCodeRoute
+  "/pay/$code": typeof PayCodeLazyRoute
 }
 
 export interface FileRoutesByTo {
-  "/pay/$code": typeof PayCodeRoute
+  "/pay/$code": typeof PayCodeLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  "/pay/$code": typeof PayCodeRoute
+  "/pay/$code": typeof PayCodeLazyRoute
 }
 
 export interface FileRouteTypes {
@@ -60,11 +65,11 @@ export interface FileRouteTypes {
 }
 
 export interface RootRouteChildren {
-  PayCodeRoute: typeof PayCodeRoute
+  PayCodeLazyRoute: typeof PayCodeLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  PayCodeRoute: PayCodeRoute,
+  PayCodeLazyRoute: PayCodeLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -81,7 +86,7 @@ export const routeTree = rootRoute
       ]
     },
     "/pay/$code": {
-      "filePath": "pay/$code.tsx"
+      "filePath": "pay/$code.lazy.tsx"
     }
   }
 }

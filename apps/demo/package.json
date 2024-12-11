@@ -43,8 +43,10 @@
   "dependencies": {
     "@qrph/qrph": "^0.0.1",
     "@tanstack/react-router": "^1.87.7",
+    "qr-code-styling": "^1.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-qrcode-logo": "^3.0.0",
     "styled-components": "^6.1.13"
   }
 }
