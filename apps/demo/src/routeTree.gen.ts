@@ -16,9 +16,16 @@ import { Route as rootRoute } from "./routes/__root.tsx"
 
 // Create Virtual Routes
 
+const IndexLazyImport = createFileRoute("/")()
 const PayCodeLazyImport = createFileRoute("/pay/$code")()
 
 // Create/Update Routes
+
+const IndexLazyRoute = IndexLazyImport.update({
+  id: "/",
+  path: "/",
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import("./routes/index.lazy.tsx").then((d) => d.Route))
 
 const PayCodeLazyRoute = PayCodeLazyImport.update({
   id: "/pay/$code",
@@ -30,6 +37,13 @@ const PayCodeLazyRoute = PayCodeLazyImport.update({
 
 declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
+    "/": {
+      id: "/"
+      path: "/"
+      fullPath: "/"
+      preLoaderRoute: typeof IndexLazyImport
+      parentRoute: typeof rootRoute
+    }
     "/pay/$code": {
       id: "/pay/$code"
       path: "/pay/$code"
@@ -43,32 +57,37 @@ declare module "@tanstack/react-router" {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
+  "/": typeof IndexLazyRoute
   "/pay/$code": typeof PayCodeLazyRoute
 }
 
 export interface FileRoutesByTo {
+  "/": typeof IndexLazyRoute
   "/pay/$code": typeof PayCodeLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
+  "/": typeof IndexLazyRoute
   "/pay/$code": typeof PayCodeLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/pay/$code"
+  fullPaths: "/" | "/pay/$code"
   fileRoutesByTo: FileRoutesByTo
-  to: "/pay/$code"
-  id: "__root__" | "/pay/$code"
+  to: "/" | "/pay/$code"
+  id: "__root__" | "/" | "/pay/$code"
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
+  IndexLazyRoute: typeof IndexLazyRoute
   PayCodeLazyRoute: typeof PayCodeLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexLazyRoute: IndexLazyRoute,
   PayCodeLazyRoute: PayCodeLazyRoute,
 }
 
@@ -82,8 +101,12 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
+        "/",
         "/pay/$code"
       ]
+    },
+    "/": {
+      "filePath": "index.lazy.tsx"
     },
     "/pay/$code": {
       "filePath": "pay/$code.lazy.tsx"
