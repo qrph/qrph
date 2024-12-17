@@ -46,8 +46,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@tanstack/router-vite-plugin':
-        specifier: ^1.87.7
-        version: 1.87.7(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
+        specifier: ^1.91.1
+        version: 1.91.1(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
       '@types/react':
         specifier: ^19.0.1
         version: 19.0.1
@@ -1077,8 +1077,8 @@ packages:
     resolution: {integrity: sha512-w9Px1C6DM0YNVXvu1VjUuZ5el0ykOeofEmEZBW83VUTzvCXFpcjPCHncU9FO9uXup8NFIxNfGz+xpwf93GoFnQ==}
     engines: {node: '>=12'}
 
-  '@tanstack/router-plugin@1.87.7':
-    resolution: {integrity: sha512-3QdDyanjZkGW9yqqiDbjrFIEnrDpJGydNB5pawTbv2UsWO3vXQfzFY6wYuUZGjbXjXxXZ+C0H2f/igIP0dDDqg==}
+  '@tanstack/router-plugin@1.91.1':
+    resolution: {integrity: sha512-+htKBNRKwdZjpgT0ee32oBb7gpH3o0cJUKvx74oTfZ9N5oth255pns1ka4Sa6lhC/gyvC3NLgk/lMqD7eVJejA==}
     engines: {node: '>=12'}
     peerDependencies:
       '@rsbuild/core': '>=1.0.2'
@@ -1092,8 +1092,8 @@ packages:
       webpack:
         optional: true
 
-  '@tanstack/router-vite-plugin@1.87.7':
-    resolution: {integrity: sha512-0JlW0HfCafomLUdieaCbDK2UjfwXn77+OaDFUDrQULxDrqtj9BWL+sUXvLdyQGzxmbhAtGO5Q4YGsj0SweuEFg==}
+  '@tanstack/router-vite-plugin@1.91.1':
+    resolution: {integrity: sha512-wJvDJQOeQrUgLNuv88tf1ERuB48DKf9BkybNNSaIZkfAn4biA8ciyfiZiwnMUVh5zljaaEYSdds4nMiqlPhrrw==}
     engines: {node: '>=12'}
 
   '@tanstack/store@0.6.0':
@@ -1355,8 +1355,8 @@ packages:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
     engines: {node: '>= 0.4'}
 
-  babel-dead-code-elimination@1.0.6:
-    resolution: {integrity: sha512-JxFi9qyRJpN0LjEbbjbN8g0ux71Qppn9R8Qe3k6QzHg2CaKsbUQtbn307LQGiDLGjV6JCtEFqfxzVig9MyDCHQ==}
+  babel-dead-code-elimination@1.0.8:
+    resolution: {integrity: sha512-og6HQERk0Cmm+nTT4Od2wbPtgABXFMPaHACjbKLulZIFMkYyXZLkUGuAxdgpMJBrxyt/XFpSz++lNzjbcMnPkQ==}
 
   babel-plugin-macros@3.1.0:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
@@ -3962,7 +3962,7 @@ snapshots:
       tsx: 4.19.2
       zod: 3.23.8
 
-  '@tanstack/router-plugin@1.87.7(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))':
+  '@tanstack/router-plugin@1.91.1(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/generator': 7.26.3
@@ -3978,7 +3978,7 @@ snapshots:
       '@types/babel__generator': 7.6.8
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.20.6
-      babel-dead-code-elimination: 1.0.6
+      babel-dead-code-elimination: 1.0.8
       chokidar: 3.6.0
       unplugin: 1.16.0
       zod: 3.23.8
@@ -3987,9 +3987,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/router-vite-plugin@1.87.7(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))':
+  '@tanstack/router-vite-plugin@1.91.1(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))':
     dependencies:
-      '@tanstack/router-plugin': 1.87.7(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
+      '@tanstack/router-plugin': 1.91.1(vite@6.0.3(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
     transitivePeerDependencies:
       - '@rsbuild/core'
       - supports-color
@@ -4306,7 +4306,7 @@ snapshots:
 
   axobject-query@4.1.0: {}
 
-  babel-dead-code-elimination@1.0.6:
+  babel-dead-code-elimination@1.0.8:
     dependencies:
       '@babel/core': 7.26.0
       '@babel/parser': 7.26.3
