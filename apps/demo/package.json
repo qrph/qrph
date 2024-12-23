@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@qrph/qrph": "^0.0.1",
-    "@tanstack/react-router": "^1.87.7",
+    "@tanstack/react-router": "^1.92.3",
     "qr-code-styling": "^1.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
