@@ -1,16 +1,12 @@
-import { configs } from "@macalinao/eslint-config";
+import { configs } from "@macalinao/eslint-config-react";
 
 export default [
-  ...configs.base,
-  ...configs.react,
+  ...configs.reactFull,
   {
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
       },
-    },
-    rules: {
-      "import-x/extensions": ["error", "ignorePackages"],
     },
   },
 ];

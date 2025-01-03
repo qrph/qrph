@@ -1,9 +1,11 @@
-import { decodeQRPHFromText, QRPHData } from "@qrph/qrph";
+import type { QRPHData } from "@qrph/qrph";
+import { decodeQRPHFromText } from "@qrph/qrph";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import QRCodeStyling from "qr-code-styling";
 import { useEffect, useRef } from "react";
-import qrphLogo from "../../components/QRPH.svg?raw";
 import tw, { css, styled } from "twin.macro";
+
+import qrphLogo from "../../components/QRPH.svg?raw";
 
 const encodeSVG = (svg: string) => {
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
@@ -126,7 +128,8 @@ const Metadata: React.FC<{
 };
 
 const CodePage: React.FC = () => {
-  const { code: codeEncoded } = Route.useParams();
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+  const { code: codeEncoded } = Route.useParams() as { code: string };
   const code = atob(codeEncoded);
 
   const parsed = decodeQRPHFromText(code);

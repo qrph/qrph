@@ -12,6 +12,7 @@ const decodeRootQRInfo = (root: UnstructuredEMVQRData): RootQRInfo => {
   return zRootQRInfo.parse({
     pointOfInitiationMethod:
       POINT_OF_INITIATION_METHOD_MAP[
+        // eslint-disable-next-line @typescript-eslint/no-base-to-string
         root[constants.ID.IDPointOfInitiationMethod]?.toString() ?? ""
       ],
     merchantCategoryCode: root[constants.ID.IDMerchantCategoryCode],
