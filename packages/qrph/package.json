@@ -11,6 +11,12 @@
     "src/",
     "README.md"
   ],
+  "keywords": [
+    "qrph",
+    "qr",
+    "emv",
+    "qrcode"
+  ],
   "dependencies": {
     "@qrph/emv-qr": "workspace:^",
     "tslib": "^2.8.1",

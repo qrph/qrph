@@ -11,6 +11,11 @@
     "src/",
     "README.md"
   ],
+  "keywords": [
+    "emv",
+    "qr",
+    "qrcode"
+  ],
   "dependencies": {
     "crc": "^4.3.2",
     "lodash-es": "^4.17.21",
