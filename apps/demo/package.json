@@ -42,7 +42,7 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "dependencies": {
-    "@qrph/qrph": "^0.0.1",
+    "@qrph/qrph": "workspace:*",
     "@tanstack/react-router": "^1.94.1",
     "qr-code-styling": "^1.8.4",
     "react": "^19.0.0",
