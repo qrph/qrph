@@ -29,6 +29,7 @@ export default defineConfig({
     }),
     svgr(),
     react({
+      exclude: /packages\//,
       babel: {
         plugins: [
           "babel-plugin-twin",
