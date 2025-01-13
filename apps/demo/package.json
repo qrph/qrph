@@ -44,7 +44,7 @@
   "dependencies": {
     "@qrph/qrph": "workspace:*",
     "@tanstack/react-router": "^1.94.1",
-    "qr-code-styling": "^1.8.4",
+    "qr-code-styling": "^1.9.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-qrcode-logo": "^3.0.0",
